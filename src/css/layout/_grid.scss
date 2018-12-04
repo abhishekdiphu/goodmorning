@@ -1,0 +1,18 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .col-md-1-5 {
+        width: calc((100% - 4 * #{$gutter-width}) / 5); 
+
+        &:not(:last-child) {
+            margin-right: $gutter-width;
+        }
+    }
+}

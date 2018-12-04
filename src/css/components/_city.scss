@@ -1,0 +1,19 @@
+.item {
+    margin-bottom: $bot-margin-lg;    
+    
+    &__info {
+        margin-bottom: $bot-margin-sm;
+    }
+}
+
+.forecast__info {
+    text-align: center;
+    margin-bottom: $bot-margin-sm;   
+}
+
+@media only screen and (min-width: 768px) {
+    .forecast__info {
+        text-align: unset;
+        margin-bottom: 0;
+    }
+}
