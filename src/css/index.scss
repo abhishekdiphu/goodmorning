@@ -2,10 +2,11 @@
 @import "base/reset"; 
 
 @import "components/city";
+@import "components/popup";
   
 @import "layout/content";
-@import "layout/grid";  
-  
-@import "sections/sidebar";      
-@import "sections/citylist";     
-   
+@import "layout/grid";   
+    
+@import "sections/sidebar";    
+@import "sections/citylist"; 
+    

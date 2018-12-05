@@ -12,7 +12,7 @@ function city(data) {
     let country = data.city.country;
     let forecast = data.list;
     let todaysForecast = forecast[0];
-    let todaysDate = (new Date(todaysForecast.dt + 1000)).toDateString();
+    let todaysDate = (new Date(todaysForecast.dt * 1000)).toDateString();
     let unit = "&#176; " + document.querySelector("#f").checked ? "F" : "C";
 
     item.innerHTML = 
@@ -27,11 +27,20 @@ function city(data) {
             "<p class=\"item__temp--high\">" + todaysForecast.temp.max + unit + "</p>" +
           "</div>" +
         "</div>" +
+        "<div class=\"toggle-box\">" +
+          "<i class=\"fas fa-caret-down toggle\"></i>" +
+        "</div>" +
       "</div>" + 
       "<div class=\"forecast__container\">" +
         "<div class=\"row\">" +
         "</div>" +
       "</div>";
+
+    let forecastContainer = item.querySelector(".forecast__container");
+    item.querySelector(".toggle").addEventListener("click", function() {
+        forecastContainer.classList.toggle("forecast__show");
+        this.classList.toggle("fa-caret-up");
+    });
 
     let row = item.querySelector(".row");
     forecast.forEach(function(thatDay) {

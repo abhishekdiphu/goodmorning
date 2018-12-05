@@ -1,13 +1,18 @@
 "use strict";
 
 import { addCity } from "./citylist.js";
-
+import { showPopup } from "../components/popup.js";
 
 async function getWeather(url, cb) {
-  let response = await fetch(url, {mode: 'cors'});
-  let result = await response.json();
-  
-  cb(result);
+  try {
+    let response = await fetch(url, {mode: 'cors'});
+    let result = await response.json();
+    
+    cb(result);
+  } catch(e) {
+    // display popup saying there was an error
+    showPopup(document.querySelector(".popup"));
+  }
 }
 
 function initSidebar() {
