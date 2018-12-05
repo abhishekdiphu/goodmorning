@@ -34,7 +34,7 @@ function initSidebar() {
     let units = sidebar.querySelector("#f").checked ? "imperial" : "metric";
 
     let location = input.value.replace(/ /g, '%20');
-    let searchQuery = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + location + "&units=" + units + "&cnt=5&APPID=f3ef326d9ead2dc969238af1a6f1d733";
+    let searchQuery = "https://api.openweathermap.org/data/2.5/forecast/daily?q=" + location + "&units=" + units + "&cnt=5&APPID=f3ef326d9ead2dc969238af1a6f1d733";
 
   	getWeather(searchQuery, addCity);
   });
