@@ -1,4 +1,4 @@
-# Weather App _under construction
+# Weather App
 
 In this weather app you can search cities around the world and get a 5 day forecast!
 
