@@ -15,6 +15,20 @@
             clear: both;
         }
     }
+
+    &__location {
+        font-size: 32px;
+        margin-bottom: 3px;
+    }
+
+    &__summary {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    &__temp {
+        font-size:  13px;
+    }
 }
 
 .toggle {
@@ -31,18 +45,30 @@
 .forecast {
 
     &__container {
-        height: 0;
+        max-height: 0;
         overflow: hidden;
+        margin-top: 15px;
         transition: $transition-time;
     }
 
     &__info {
         text-align: center;
-        margin-bottom: $bot-margin-sm;   
+        margin: 0 25px 15px 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid lightcyan;  
+    }
+
+    &__summary {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    &__temp {
+        font-size:  13px;
     }
 
     &__show {
-        height: 760px;
+        max-height: 1000px;
     }
 }
 
@@ -50,12 +76,32 @@
 
     .forecast {
         &__info {
+            position: relative;
             text-align: unset;
-            margin-bottom: 0; 
+            margin: unset;
+            border-bottom: unset;
+            padding-left: 10px;
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                width: 0;
+                height: 4px;
+                background-color: lightcyan;
+                transition: $transition-time;
+            }
+
+            &:hover::after {
+                width: 100%;
+                left: 0;
+            }
         }
 
         &__show {
-            height: 150px;
+            padding: 15px;
         }
     }
 }
