@@ -6,10 +6,14 @@
 
 body {
   font-family: "Open sans", sans-serif;
+  background-image: url(images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 html, body {
-  height: 100%;
+  min-height: 100%;
 }
 
 ul {
@@ -17,11 +21,11 @@ ul {
 }
 
 .item {
-  background-color: lightblue;
   border-radius: 8px;
   padding: 10px 20px 0 20px;
   color: #333;
   margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 .item__container {
   position: relative;
@@ -168,7 +172,14 @@ ul {
 @media only screen and (min-width: 768px) {
   .content {
     grid-template-columns: 320px auto;
-    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 70vh;
+    max-width: 900px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   }
 }
 .row {
@@ -190,19 +201,26 @@ ul {
 }
 .list {
   padding: 20px;
+  overflow-y: auto;
 }
 
 .sidebar {
-  background-color: #444;
-  padding: 20px;
   margin: 20px 20px 0 20px;
   border-radius: 8px;
   color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .header {
+  background-color: #222;
   font-weight: normal;
   margin-bottom: 5px;
+  margin-top: 20px;
+  padding: 8px 0 8px 20px;
+}
+
+form {
+  padding: 0 0 20px 20px;
 }
 
 .search {
@@ -230,13 +248,16 @@ label {
   .sidebar {
     padding-left: 0;
     padding-right: 0;
-    margin: 20px 0 20px 20px;
+    margin: 0 0 0 20px;
+    border-radius: 5px;
+    background-color: #222;
+    box-shadow: unset;
   }
 
   .header {
     text-align: center;
     padding: 20px 0 25px 0;
-    margin: 20px 0 20px 15px;
+    margin: 0;
     line-height: 40px;
     font-size: 38px;
     letter-spacing: 4px;
@@ -244,7 +265,6 @@ label {
 
   form {
     padding: 25px;
-    background-color: steelblue;
     text-align: center;
   }
 

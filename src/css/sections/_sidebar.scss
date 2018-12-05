@@ -1,14 +1,20 @@
 .sidebar {
-    background-color: #444;
-    padding: 20px;
     margin: 20px 20px 0 20px;
     border-radius: 8px;
     color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .4);
 }
 
 .header {
+    background-color: #222;
     font-weight: normal;
     margin-bottom: 5px;
+    margin-top: 20px;
+    padding: 8px 0 8px 20px;
+}
+
+form {
+    padding: 0 0 20px 20px;
 }
 
 .search {
@@ -37,13 +43,16 @@ label {
     .sidebar {
         padding-left: 0;
         padding-right: 0;
-        margin: 20px 0 20px 20px;
+        margin: 0 0 0 20px;
+        border-radius: 5px;
+        background-color: #222;
+        box-shadow: unset;
     }
 
     .header {
         text-align: center;
         padding: 20px 0 25px 0;
-        margin: 20px 0 20px 15px;
+        margin: 0;
         line-height: 40px;
         font-size: 38px;
         letter-spacing: 4px;
@@ -51,7 +60,6 @@ label {
 
     form {
         padding: 25px;
-        background-color: steelblue;
         text-align: center;
     }
 

@@ -1,9 +1,9 @@
 .item {
-    background-color: lightblue;
     border-radius: 8px;
     padding: 10px 20px 0 20px;
     color: #333;
-    margin-bottom: $bot-margin-lg;    
+    margin-bottom: $bot-margin-lg; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);   
     
     &__container {
         position: relative;
